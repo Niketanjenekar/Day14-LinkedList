@@ -44,33 +44,43 @@ namespace Day14_LinkedlistProblem
             }
         }
 
-        internal Node InsertAtPerticularPosition(int position, int Data)
+        internal Node RemoveFirstNode()
         {
-            if (position < 1)
-                Console.WriteLine("Invalid position");
-            if (position == 1)
+            if (this.head == null)
             {
-                var newNode = new Node(Data);
-                newNode.next = this.head;
-                head = newNode;
+                return null;
             }
-            else
-            {
-                while (position-- != 0)
-                {
-                    if (position == 1)
-                    {
-                        Node node = new Node(Data);
-                        node.next = this.head.next;
-                        head.next = node;
-                        break;
-                    }
-                    head = head.next;
-                }
-                if (position != 1)
-                    Console.WriteLine("Position out of range");
-            }
-            return head;
+            this.head = this.head.next;
+            return this.head;
         }
+
+        //internal Node InsertAtPerticularPosition(int position, int Data)
+        //{
+        //    if (position < 1)
+        //        Console.WriteLine("Invalid position");
+        //    if (position == 1)
+        //    {
+        //        var newNode = new Node(Data);
+        //        newNode.next = this.head;
+        //        head = newNode;
+        //    }
+        //    else
+        //    {
+        //        while (position-- != 0)
+        //        {
+        //            if (position == 1)
+        //            {
+        //                Node node = new Node(Data);
+        //                node.next = this.head.next;
+        //                head.next = node;
+        //                break;
+        //            }
+        //            head = head.next;
+        //        }
+        //        if (position != 1)
+        //            Console.WriteLine("Position out of range");
+        //    }
+        //    return head;
+        //}
     }
 }
