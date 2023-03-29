@@ -11,20 +11,15 @@ namespace Day14_LinkedlistProblem
             Console.WriteLine("**********************************************************");
             Linkedlist linkedList = new Linkedlist();
             linkedList.Add(56);
+            Console.WriteLine("Node with data 56 is first Created");
+            Console.WriteLine("**********************************************************");
             linkedList.Add(30);
+            Console.WriteLine("Next Append 30 to 56");
+            Console.WriteLine("**********************************************************");
             linkedList.Add(70);
+            Console.WriteLine("Finally Append 70 to 30");
+            Console.WriteLine("**********************************************************");
             linkedList.Display();
-            Console.WriteLine("**********************************************************");
-
-            linkedList.Add(30);
-            Console.WriteLine("Next 30 will be added to 70 ");
-            Console.WriteLine("**********************************************************"); ;
-
-            linkedList.Add(56);
-            Console.WriteLine("Finally 56 will be added to 30");
-            Console.WriteLine("**********************************************************");
-
-            Console.WriteLine("LinkedList Sequence is : 56->30->70");
             Console.WriteLine("**********************************************************");
 
 
